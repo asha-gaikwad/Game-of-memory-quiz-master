@@ -13,14 +13,14 @@ const ParticlesBackground = () => {
     const loadParticles = async () => {
       if (!window.particlesJS) {
         const script = document.createElement('script');
-        script.src = '../assets/particles/particles.min.js'; // ✅ No `/public` prefix
+        script.src = '/public/assets/particles/particles.min.js'; // ✅ No `/public` prefix
         script.onload = () => {
-          window.particlesJS.load('particles-js', '../assets/particles/demo/particles.json');
+          window.particlesJS.load('particles-js', '/public/assets/particles/demo/particles.json');
 
         };
         document.body.appendChild(script);
       } else {
-        window.particlesJS.load('particles-js', '../assets/particles/demo/particles.json');
+        window.particlesJS.load('particles-js', '/public/assets/particles/demo/particles.json');
 
       }
     };
