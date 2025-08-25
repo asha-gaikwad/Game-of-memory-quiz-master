@@ -59,12 +59,12 @@ const MemoryQuiz = () => {
   const [countdown, setCountdown] = useState<number | null>(null);
   const [levelOneComplete, setLevelOneComplete] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const clickSound = new Audio('assets/sounds/click1.mp3');
-  const matchSound = new Audio('assets/sounds/match.mp3');
-  const gameOverSound = new Audio('assets/sounds/gameOver.mp3');
-  const startGameSound = new Audio('assets/sounds/gameStart.mp3');
-  const winSound = new Audio('assets/sounds/winning.mp3');
-  const levelUpSound = new Audio('assets/sounds/levelUp.mp3');
+  const clickSound = new Audio('../assets/sounds/click.mp3');
+  const matchSound = new Audio('../assets/sounds/match.mp3');
+  const gameOverSound = new Audio('../assets/sounds/gameOver.mp3');
+  const startGameSound = new Audio('../assets/sounds/gameStart.mp3');
+  const winSound = new Audio('../assets/sounds/winning.mp3');
+  const levelUpSound = new Audio('../assets/sounds/levelUp.mp3');
   const lockRef = useRef(false);
   const backgroundMusicRef = useRef<HTMLAudioElement | null>(null);
 
@@ -380,7 +380,7 @@ const MemoryQuiz = () => {
           {/* ✅ Background Music */}
           <audio
             ref={backgroundMusicRef}
-            src="/assets/sounds/background.mp3"
+            src="../assets/sounds/background.mp3"
             loop
             onCanPlay={() => {
               if (!gameStarted) {
